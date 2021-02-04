@@ -62,23 +62,22 @@ body {
         grid-template-rows: repeat(3, 90px);
         position: absolute;
         width: 100%;
-        top: -1000px;
+        top: -700px;
     }
 
     .navbar_menu.active {
         top: 100%;
         opacity: 1;
         z-index: 99;
-        height: 100vh;
+        height: 50vh;
         font-size: 1.5rem;
-        background: var(--black);
     }
 
     .navbar_toggle .bar {
         width: 25px;
         height: 3px;
         margin: 5px auto;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.4s ease-in-out;
         background: var(--Brown_Grey);
         display: block;
         cursor: pointer;
@@ -132,8 +131,17 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-    .welcome-section:active {
-        padding-top: 500px;
+    .welcome-section.active {
+        padding-top: 400px;
+        padding-bottom: 200px;
+    }
+
+    .welcome-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome-section h2 {
+        font-size: 1.3rem;
     }
 }
 /*Projects Section*/
@@ -193,6 +201,11 @@ body {
     color: var(--Green_Leaf);
 }
 
+@media screen and (max-width: 768px) {
+    .project_container {
+        padding: 3rem;
+    }
+}
 
 /*Contanct Section*/
 
@@ -225,14 +238,39 @@ body {
 .contact_link {
     padding: 0.5rem 1.5rem;
     color: var(--Tanly);
-    transition: transform 0.3s ease-out;
+    transition: color 0.2s ease-in;
     font-size: 1.2rem;
     display: inline-block;
 }
 
  .contact_link:hover {
     transform: translateY(8px);
+    color: var(--Green_Leaf);
+    border-radius: 10px;
+    background-color: var(--White);
   }
+
+  @media screen and (max-width: 768px) {
+    .contact_container {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .contact_container h2 {
+        font-size: 1.5rem;
+
+  }
+
+  .contact_container p {
+      font-size: 1rem;
+  }
+
+  .contact_link {
+    font-size: 1rem;
+}
+  }
+
+/*Footer Section*/
 
   .section_container {
     height: 100px;
@@ -241,7 +279,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
   }
 
   .footer-button {
@@ -251,7 +288,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     padding: 0.5rem;
-    margin: 0.5rem;
     transition: padding 0.2s
   
   }
@@ -269,3 +305,8 @@ body {
       padding: 0.6rem;
   }
 
+  @media screen and (max-width: 768px) {
+    .section_container {
+        padding: 2rem;
+    }
+  }
